@@ -3,7 +3,7 @@ package br.edu.infnet.appsdi.aula01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExemploTeste {
+public class AlunoListaTeste {
 	
 	public static void main(String[] args) {
 		
