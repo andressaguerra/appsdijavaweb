@@ -1,15 +1,30 @@
 package br.edu.infnet.appsdi.aula01;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExemploTeste {
 	
 	public static void main(String[] args) {
 		
-		Aluno aluno = new Aluno();
+		String[] nomes = {"Andressa", "Luane", "Gabriel"};
+		String[] emails = {"and@email.com", "lua@email.com", "gab@email.com"};
+	
+		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		aluno.setId(1);
-		aluno.setNome("Andressa Guerra");
-		aluno.setEmail("andressa.guerra@al.infnet.edu.br");
-		System.out.println(aluno);
+		for(int i = 0; i < nomes.length; i++) {	
+			Aluno aluno = new Aluno();
+			
+			aluno.setId(i + 1);
+			aluno.setNome(nomes[i]);
+			aluno.setEmail(emails[i]);
+			
+			alunos.add(aluno);
+		}
+		
+		for (Aluno a : alunos) {
+			System.out.println(a);
+		}
 	}
 
 }
